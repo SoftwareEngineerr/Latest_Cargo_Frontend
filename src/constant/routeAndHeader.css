@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'NotoPashto';
+    src: url('../assets/fonts/arabi/static/NotoNaskhArabic-Bold.ttf') format('truetype');
+    /* src: url('/public/fonts/notoNakash.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'pashtoBadya';
+    src: url('../assets/fonts/pashto/pashtoBadiya.ttf') format('truetype');
+    /* src: url('/public/fonts/notoNakash.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+  .menuItem span:nth-of-type(2){ 
+    font-family: 'NotoPashto', 'pashtoBadya', sans-serif;
+    font-size: 15px;
+}

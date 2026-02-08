@@ -1,0 +1,322 @@
+
+@media print {
+    @page {
+        size: landscape;
+        margin: 1in;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        direction: rtl;
+        background-color: white;
+        font-weight: bold;
+    }
+    body, #overlay {
+        background: white;
+    }
+    .tradeMark{
+        position: absolute;
+        writing-mode: vertical-rl;
+        left: 135px;
+        top: 568px;
+        width: 0px;
+        height: 222px;
+        font-size: 14px;
+        color: #a10202;
+    }
+}
+
+@font-face {
+    font-family: 'CustomFont'; 
+    font-weight: bold;
+    font-style: normal;
+}
+body, #overlay {
+    background: white;
+    font-family: 'CustomFont', Arial;
+    font-weight: bold;
+}
+.report-card {
+    font-family: 'CustomFont', Arial;
+    margin: 3px auto;
+    /* width: 100%; */
+    /* max-width: 800px; */
+    padding: 5px;
+    /* border: 1px solid #ddd; */
+    margin-top: 20px;
+    width: 1050px; /* A4 width */
+    /* height: 800px; */
+    margin: auto; /* Centering the content */
+    direction: rtl;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+
+.report-card-header, .report-card-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-card-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.report-card-body h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+.report-card-body table{
+    border-collapse: collapse;
+}
+.report-card-body  .firstTable {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-bottom: 20px; */
+}
+
+.firstTable, .firstTable th, .firstTable td {
+    /* border: 1px solid #ddd; */
+}
+
+.firstTable  th, .firstTable td {
+    /* padding: 8px; */
+    text-align: right;
+}
+
+.firstTable th {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid gray; 
+}
+
+.header{
+    margin: 0 auto;
+    height: 3cm;
+    text-align: center;
+    font-size: 20px;
+}
+.header .headerTable{
+    width: 34%;
+    text-align: center;
+    float: left;
+    font-size: 20px;
+}
+.header .logoTable{
+    text-align: right;
+    width: 33%;
+    float: left;
+}
+.header .marifTable{
+    text-align: left;
+    width: 33%;
+    float: left;
+}
+.header .marifTable .resultSchoolLogo{
+    width: 34%;
+    float: left;
+}
+.header .logoTable .resultSchoolLogo{
+    width: 30%;
+    float: right;
+}
+
+.capsule{
+    background-color: rgb(216, 255, 255);
+    border:2px solid rgb(46, 231, 255);
+    border-radius: 20px;
+    padding:3px 10px;
+    color: maroon;
+}
+.capsule table{
+    width: 100%;
+    font-size: 18px;
+}
+.capsule table tr td:nth-child(1){
+    text-align: right;
+    color: maroon;
+    width: 40%;
+}
+.capsule table tr td:nth-child(2){
+    text-align: center;
+    color: maroon;
+    font-size: 22px;
+    width: 20%;
+}
+.capsule table tr td:nth-child(3){
+    color: maroon;
+    text-align: left;
+    width: 40%;
+}
+.percentageSheet{
+    width: 100%;
+}
+
+.firstColumn{
+    width:40% ;
+}
+.secondColumn{
+    width:30% ;
+}
+.thirdColumn{
+    width:30% ;
+}
+.thirdColumn table{
+    width:100%
+}
+
+.attendance, .allSubsNum, .personalInfo{
+    border: 1px solid gray;
+    width: 100%;
+    vertical-align: top;
+}
+.attendance td, .allSubsNum td, .personalInfo td{
+    border: 1px solid gray;
+    padding: 7px 1px;
+    text-align: center;
+}
+.allSubsNum tr td{
+    padding: 7px 1px;
+    text-align: center;
+}
+.verticalAlignTop{
+    vertical-align: top;
+}
+.personalInfo tr:nth-child(even), .attendance tr:nth-child(even), .allSubsNum tr:nth-child(even)  {
+    /* background-color: #f7f7f7; */
+  }
+  
+.signature tr{ 
+    height: 40px;
+}
+/* table tr:nth-child(odd) {
+    background-color: white;
+  } */
+
+  .border-wrapper {
+    position: relative;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: white; /* Background color for content */
+}
+
+/* Borders */
+.top-border, .right-border, .bottom-border, .left-border {
+    /* position: absolute;
+    background-size: cover; */
+}
+
+.top-border, .horizontal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust based on your image size */
+    background-image: url('images/borders/hor.jpg'); /* Replace with your image */
+    background-repeat: repeat-x; /* Repeat only horizontally */
+
+}
+
+.right-border, .rightVertical {
+    top: 20px; /* Match height of top-border */
+    right: 0;
+    width: 38px; /* Adjust based on your image size */
+    height: calc(100% - 40px); /* Full height minus top and bottom border height */
+    background-image: url('images/borders/vert.jpg'); /* Replace with your image */
+    background-repeat: repeat-y; /* Repeat only horizontally */
+}
+
+.bottom-border, .horizontal {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust based on your image size */
+    background-image: url('images/borders/hor.jpg'); /* Replace with your image */
+    background-repeat: repeat-x; /* Repeat only horizontally */
+}
+
+.left-border, .leftVertical {
+    top: 20px; /* Match height of top-border */
+    left: 0;
+    width: 38px; /* Adjust based on your image size */
+    height: calc(100% - 40px); /* Full height minus top and bottom border height */
+    background-image: url('images/borders/vert.jpg'); /* Replace with your image */
+    background-repeat: repeat-y; /* Repeat only horizontally */
+}
+
+/* Corners */
+.topLeft, .topRight, .bottomLeft, .bottomRight {
+    /* position: absolute; */
+    width: 22px;
+    height: 18px;
+    /* background-size  : cover; */
+}
+
+.top-left-corner, .topLeft {
+    top: 0;
+    left: 0;
+    background-image: url('images/borders/c1.jpg'); /* Replace with your image */
+}
+
+.top-right-corner, .topRight {
+    top: 0;
+    right: 0;
+    background-image: url('images/borders/c2.jpg'); /* Replace with your image */
+}
+
+.bottom-left-corner, .bottomLeft {
+    bottom: 0;
+    left: 0;
+    background-image: url('images/borders/c3.jpg'); /* Replace with your image */
+}
+
+.bottom-right-corner, .bottomRight {
+    bottom: 0;
+    right: 0;
+    background-image: url('images/borders/c4.jpg'); /* Replace with your image */
+}
+.borderFull{
+    border-collapse: collapse;
+}
+
+table.allSubsNum tr:first-child th:first-child, .colorTable tr:nth-child(2) td:first-child  {
+    
+}
+table.allSubsNum tr:first-child th:nth-child(2), .colorTable tr:nth-child(3) td:first-child {
+    
+}
+table.allSubsNum tr:first-child th:nth-child(3), .colorTable tr:nth-child(4) td:first-child {
+ 
+}
+table.allSubsNum tr:first-child th:nth-child(4) {
+    /* background: #00b0f0; */
+    /* color: white; */
+}
+
+.signature tr:first-child td:nth-child(2), .signature tr:first-child td:nth-child(3){
+    width: 30%;
+}
+.signature tr:nth-child(3) td:nth-child(2), .signature tr:nth-child(3) td:nth-child(3){
+    height: 85px;
+}
+.headerTable span{
+    font-size: 15px;
+}
+.personalInfo, .attendance, .signature, .headerTable, .allSubsNum{
+    font-weight: bold;
+}
+.tradeMark{
+    position: absolute;
+    writing-mode: vertical-rl;
+    left: 163px;
+    top: 568px;
+    width: 0px;
+    height: 222px;
+    color: #a10202;
+}

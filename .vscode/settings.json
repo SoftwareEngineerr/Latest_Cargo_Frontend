@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "new",
+            "database": "E:\\wasily\\POS\\NewSharifiPharmacy\\hardware.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "E:\\wasily\\POS\\NewSharifiPharmacy\\new.db",
+            "name": "newnew"
+        }
+    ]
+}

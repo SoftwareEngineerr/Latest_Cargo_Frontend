@@ -1,0 +1,58 @@
+.getLoader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    display: block;
+    background-image:
+      linear-gradient(#f1f1f1 16px, transparent 0) ,
+      linear-gradient(#ffaf00 16px, transparent 0) ,
+      linear-gradient(#ffaf00 16px, transparent 0) ,
+      linear-gradient(#f1f1f1 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(0deg)
+    }
+    50% {
+      width: 30px;
+      height: 30px;
+      transform: rotate(180deg)
+    }
+    100% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(360deg)
+    }
+  }
+  .visible{
+    opacity: 0.7;
+    visibility: visible;
+  }
+  .hidden{
+    opacity: 0;
+    visibility: hidden; 
+  }
+
+  #mainPageLoader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 152111111;
+    opacity: 0.7;
+    transition: 0.4s;
+    visibility: visible;
+}

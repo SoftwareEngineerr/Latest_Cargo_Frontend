@@ -1,0 +1,119 @@
+.bottomTotal{
+    height: 43px;
+    background: rgba(207, 207, 207, 0.47);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-top: 1px;
+}
+
+.displayItemPrice{
+    font-size: 15px;
+    background: #a9a9a9;
+    padding: 2px 44px;
+    color: white;
+    border-radius: 5px; 
+}
+#bill-content{
+    font-size: 12px;
+    h2{
+        text-align: center;
+    }
+    .boldi{
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .total{
+        font-size: 14px;
+    }
+    .pashtoThanks{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px 0px
+    }
+    p{
+        margin: 0px
+    }
+    table{
+        border-spacing: 0;
+    }
+    tbody:nth-child(even) {
+        background-color: #ffffff;// #f8f8f8; /* Light gray for odd rows */
+      }
+      
+    tbody:nth-child(odd) {
+        background-color: #ffffff; /* White for even rows */
+    }
+}
+.dropdown{width : 4000px}
+.total {
+    margin: 12px 0px 0px 3px !important;
+    span{ font-weight: bold;}
+}
+.loanOrcash{
+    text-align: center;
+    width: 50px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    font-size: 18px;
+    background: #efeeee;
+    font-weight: bold;
+}
+.displayPruchasePrice{
+    margin: 0px;
+    font-size: 11px;
+}
+
+.prodName{ 
+    max-width: 113px; 
+}
+
+.descript{
+    height: 17px;
+    overflow: hidden;
+}
+
+.ishaqNazariBill table  td, .ishaqNazariBill tr.boldi td{
+    border: 0px !important
+}
+.eachItem{
+    // background: url('../../../assets/images/ishaqNazari/eachItem.png');
+    height: 38px;
+    background-position-x: 3px;
+    width: 420px;
+    text-align: center;
+}
+.totalBackground{
+    // background: url('../../../assets/images/ishaqNazari/total.png');
+    height: 33px;
+    background-position-x: 3px;
+    width: 420px;
+    text-align: center;
+}
+.nameTable{
+    // background: url('../../../assets/images/ishaqNazari/name.png');
+    width: 500px;
+    text-align: center;
+    height: 20px;
+    tr td{
+        border: 0px !important
+    }
+    .custName{
+        width: 214px;
+        text-align: right;
+        padding-right: 29px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .custTrans{
+        width: 147px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .custDate{
+        width: 113px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

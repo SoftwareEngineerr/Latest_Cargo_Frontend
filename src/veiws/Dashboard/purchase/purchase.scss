@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'NotoPashto';
+    src: url('../../../assets/fonts/arabi/static/NotoNaskhArabic-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'pashtoBadya';
+    src: url('../../../assets/fonts/pashto/pashtoBadiya.ttf') format('truetype');
+    /* src: url('/public/fonts/notoNakash.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+.purchaseProductPage, .purchaseProductPage button, .picDelBtn{
+    font-family: 'NotoPashto', 'pashtoBadya', sans-serif !important;
+}
+.fontSizing{
+    font-family: 'Plus Jakarta Sans',sans-serif !important;
+    line-height: 10px; 
+    font-size: 13px;
+}
+.fontSizing:hover{
+    background-color: rgb(231, 231, 231);
+}
+.barcode{
+    font-size: 12px;
+    color: gray;
+    word-wrap: break-word;
+}
+
+.repeat:hover{
+    background-color: rgb(245, 245, 245);
+    // margin: 10px 0px
+}
+
+.cashOrLoan{
+    width: 100px;
+    float: right;
+    margin-right: 30px;
+    font-size: 15px;
+    span{
+        font-size: 18px;
+    }
+}
+.loanInput input {
+    font-size: 18px; /* For the input text */
+}
+
+.loanInput .MuiInputLabel-root {
+    font-size: 18px; /* For the label text */
+}

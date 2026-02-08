@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'NotoPashto';
+  src: url('/public/fonts/static/NotoNaskhArabic-Bold.ttf') format('truetype');
+  /* src: url('/public/fonts/notoNakash.ttf') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0; 
+  font-family: 'NotoPashto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mainMenuMain span{ float: left;}
+code { 
+    font-family: 'NotoPashto', sans-serif;
+  }
+.allBranches div{
+  width: 100%
+}
+.allBranches .spanOne, .allBranches .spanTwo{
+  width: 45%;
+}
+.allBranches .spanTwo{
+  text-align: right;
+  font-size: 160%;
+}
+.dateOther input{
+  padding: 6px !important;
+}
+.css-1ms7hib-MuiTimelineItem-root::before{
+  -webkit-flex: 0 !important;
+  padding: 0 !important;
+}
+.MuiTimelineSeparator-root.css-1fe7e6p-MuiTimelineSeparator-root{
+  margin-left: 10px !important;
+}
+@media print {
+  .MuiChip-root {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .MuiTableRow-root {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

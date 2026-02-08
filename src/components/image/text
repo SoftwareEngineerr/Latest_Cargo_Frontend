@@ -1,0 +1,132 @@
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { Uploadimage } from '../../redux/actions/image/uploadimage';
+import { Box, Button, Grid, Input } from '@mui/material';
+import { DeleteOutlined, DriveFolderUploadOutlined } from '@mui/icons-material';
+import { useTheme } from '@emotion/react';
+
+const Fileimage = (props) => {
+  const style = useTheme().palette.Components.uploadimage;
+  const dispatch = useDispatch();
+  const link = useSelector((state)=>state.Uploadimage.link)
+  const url = useSelector((state)=>state.Api.Imagelink)
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [previewImages, setPreviewImages] = useState([]);
+  const [response , setResponse ] = useState('');
+  const [imageName , setImageName ] = useState('');
+
+
+  const handleFileChange = (event) => {
+    setSelectedFiles([...event.target.files]);
+
+    const files = event.target.files;
+    const newPreviewImages = [];
+
+    // Iterate over selected files
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+
+      // Create a new FileReader instance
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        newPreviewImages.push(e.target.result);
+
+        // Check if all files have been processed
+        if (newPreviewImages.length === files.length) {
+          setPreviewImages(newPreviewImages);
+        }
+      };
+
+      reader.readAsDataURL(file);
+    }
+   
+  };
+  const handleUpload = async () => {
+    try {
+      if(previewImages){
+      const formData = new FormData();
+
+      for (let i = 0; i < selectedFiles.length; i++) {
+        formData.append('images', selectedFiles[i]);
+      }
+      // Append folderName to the FormData
+      formData.append('folderName', 'sami'); // Replace 'sami' with the actual folder name
+
+
+      const userToken = JSON.parse(sessionStorage.getItem('User_Data')).token;
+      //console.log(formData)
+      setResponse(await dispatch(Uploadimage(url, userToken, formData)));
+
+      setImageName(link)
+      //console.log('Upload response:', imageName);
+      document.getElementById('demo').value = link;
+      // props.GetSelectedValue([link , props.name])
+      let splitlink = link.split('/',6);
+      const mainlink = `${splitlink[4]}/${splitlink[5]}`;
+      //console.log(mainlink)
+      props.GetSelectedValue([mainlink , props.name]);
+      //console.log(document.getElementById('demo').value)
+    }
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    } 
+  };
+  const handleDelete = (index) => {
+    const newPreviewImages = [...previewImages];
+    newPreviewImages.splice(index, 1);
+    setPreviewImages(newPreviewImages);
+  
+    const newSelectedFiles = [...selectedFiles];
+    newSelectedFiles.splice(index, 1);
+    setSelectedFiles(newSelectedFiles);
+
+    setImageName('')
+  };
+
+  
+
+  return (
+    <>
+    <Grid container>
+      <Grid item lg={2}>
+        <Box sx={style.mainimageContainer}>
+          <Input type="file" name={props.name} sx={style.file} onChange={handleFileChange} />
+          <DriveFolderUploadOutlined />
+          <input type="text" name={props.name} id="demo" value={imageName} required={props.required} />
+        </Box>
+      </Grid>
+      <Grid item lg={4}>
+        <Button onClick={handleUpload} color="primary" type='button'>Upload</Button>
+      </Grid>
+
+    </Grid>
+      <Box id="imageContainer">
+        {imageName && (previewImages.map((image, index) => (
+          <Box key={index} sx={style.imagePreviewmain}>
+            <a href={link} key={index} target='_blank'>
+              <Box sx={style.imagePreviewContainer}>
+                  <Box component="img" src={image} alt={`Preview ${index}`} sx={style.previewImage}>
+                  </Box>
+              </Box>
+            </a>
+                <Button  variant="contained" sx={style.button} color="secondary" type="button" onClick={() => handleDelete(index)}>
+                  <DeleteOutlined />
+                </Button>
+            </Box>
+        )))
+        }
+      </Box>
+    </>
+  );
+};
+
+// Fileimage.propTypes = {
+//   // url: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   required: PropTypes.bool,
+// };
+
+export default Fileimage;
+

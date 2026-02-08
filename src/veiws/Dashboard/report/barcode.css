@@ -1,0 +1,13 @@
+@media print {
+  body * {
+      visibility: hidden;  /* Hide everything */
+  }
+
+  #barcode-print, #barcode-print {
+      visibility: visible !important;  /* Make barcode container and SVG visible */
+      position: absolute;   /* Fix barcode on the page */
+      left: 50%;            /* Center horizontally */
+      top: 50%;             /* Center vertically */
+      transform: translate(-50%, -50%); /* Truly center it */
+  }
+}
