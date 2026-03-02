@@ -1,15 +1,15 @@
 import { UserData } from "../../hooks/FirstTimeWebSrn/Websrn";
 
 
-const web = 'https://backend.qatehkandahar.com/';
-// const web = 'http://localhost:4000/'
- const imagesServer = 'https://backend.qatehkandahar.com'
-// const imagesServer = 'http://localhost:4000/Public/'
+// const web = 'https://backend.qatehkandahar.com/';
+const web = 'http://localhost:4000/'
+//  const imagesServer = 'https://backend.qatehkandahar.com'
+const imagesServer = 'http://localhost:4000/Public/'
 
 
 const initialState = {
-    web : 'https://backend.qatehkandahar.com',
-    // web : 'https://localhost:4000',
+    // web : 'https://backend.qatehkandahar.com',
+    web : 'https://localhost:4000',
     //website api's
     Registration:`${web}registration`, 
     Login:`${web}login`,

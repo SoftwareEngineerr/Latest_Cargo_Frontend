@@ -385,6 +385,9 @@ console.log(info)
                   <Typography  style={{margin:'0'}} variant="body2">
                     5. جنس پس از مسترد شدن، برای ده روز در دفاتر ما قابل نگهداری می‌باشد.
                   </Typography>
+                  <Typography  style={{margin:'0'}} variant="body2">
+                    6. دبل دورکيدو په صورت کي جنس او پيسي نه ورکول کيږي
+                  </Typography>
                 </Grid>
               </Grid>
           <hr />
